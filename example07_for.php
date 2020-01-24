@@ -9,7 +9,7 @@
 <body>
     <?php
 
-    // for($count = 1; $count <=20; $count = $count + 3){
+    // for($count = 1; $count <= 20; $count = $count + 3){
     //     echo $count . '<br>';
     // }
 
