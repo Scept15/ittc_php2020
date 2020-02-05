@@ -28,7 +28,7 @@
 
     ?>
     <a href="example13.php?id=<?=$item['ID'] ?>">Edit </a>
-
+<br><br>
     <form  id="delete-form" action="example13_member_delete.php" method="post">
         <input type="hidden" name="id" value="<?=$item['ID']?>"/>
         <button type="submit">Delete</button>

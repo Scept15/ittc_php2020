@@ -9,8 +9,15 @@
 
     <style>
     body{
-        background-image: url(https://thumbs.dreamstime.com/z/female-index-finger-crooked-reckoning-come-over-here-isolated-white-background-32486828.jpg);
-        background-repeat: no-repeat;
+         /* background-image: url(https://thumbs.dreamstime.com/z/female-index-finger-crooked-reckoning-come-over-here-isolated-white-background-32486828.jpg);
+        background-repeat: no-repeat; 
+            SAMPLE BACKGROUND NOT GOOD!
+
+        */
+
+        background-image: url(pred.jpg);
+
+        /* CONTINUE THIS ONE */
     }
    header{
         color: aqua;
@@ -19,12 +26,14 @@
         text-align: center;
         margin: -8px;
         height: 100px;
+        box-shadow: 0px 0px 10px 2px grey;
         overflow: hidden;
     }
 
     h1{
         margin-top: 20px;
          font-size: 3rem;
+         
     }
     
    
@@ -32,12 +41,18 @@
     form{
         display: inline-block;
         position: relative;
-        margin-left: 76.5%;
-        margin-top: 10px ;
+        margin-left: 38%;
+        margin-top: 100px ;
         margin-right: -8px;
-        border-style: dashed; color: grey;
-        background-color: black;
+        padding: 10px 60px;
+        background-image: url(https://www.geeky-gadgets.com/wp-content/uploads/2019/04/Acer-Predator-Triton-500.jpg);
+        background-size: cover;
+        
+        box-shadow: 0px 0px 10px 2px black;
+        
+         
     }
+  
     
         label{
          color: aqua;   
