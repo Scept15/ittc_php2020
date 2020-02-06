@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Application List</title>
+    <style>
+    
+    image{
+
+    }
+    </style>
 </head>
 <body>
     <?php
@@ -101,6 +107,7 @@
                 <td colspan="3"><?=$item['address2']?></td>
                 <td colspan="3"><?=$item['emergency']?></td>
                 <td colspan="3"><?=$item['emergencynumber']?></td>
+                <td><img class="image" src="<?=$item['Picture']?>" alt=""></td>
             </tr>
         <?php } ?>
     </tbody>

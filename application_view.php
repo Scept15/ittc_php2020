@@ -17,6 +17,7 @@
     $item = $stmt->fetch();
 
     echo '<p>I. PERSONAL DATA </p><br><br>';
+    echo ' <img src="' .$item ['Picture'].'" alt="" style="width: 200px;"><br><br>';
     echo ' Name is : ' . $item ['name'] . '<br><br>';
     echo ' Cellphone Number is : ' . $item['number'] . '<br><br>';
     echo ' Address is : ' . $item['address'] . '<br><br>';

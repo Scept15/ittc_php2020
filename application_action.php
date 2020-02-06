@@ -12,6 +12,31 @@
 
     <?php
 
+
+    $filepath = null;
+
+     if ($_FILES['img_select']['error'] === UPLOAD_ERR_OK) {   
+        $uploaddir = $_SERVER['DOCUMENT_ROOT'].'/uploads/';
+        $uploadfile = $uploaddir . basename($_FILES['img_select']['name']);
+
+        if (!is_dir($uploaddir)){
+            mkdir($uploaddir);
+
+        }
+        //print_r($_FILES);
+
+        if (move_uploaded_file($_FILES['img_select']['tmp_name'], $uploadfile)){
+            // echo "file upload succes.";
+            $filepath = '/uploads/'.basename($_FILES['img_select']['name']);
+        } else {
+
+            echo 'file information:';
+            print_r($_FILES);
+        }
+     }
+
+
+
     $id = $_POST['id'];
     $name = $_POST[name];
     $number = $_POST[number];
@@ -94,7 +119,9 @@
         emergency = :emergency,
         emergencynumber = :emergencynumber,
         post = :post';
-
+    if ($filepath){
+        $sql .= ',Picture = :Picture'; 
+    }
     
     $sql .= 'WHERE id = :id';
     $stmt = $pdo->prepare($sql);
@@ -137,6 +164,10 @@
         'post' => $post,
         'id' => $id,
     ];
+
+    if ($filepath){
+        $params['Picture'] = $filepath; 
+    }
     $stmt->execute($params);
 
 } else {
@@ -145,14 +176,14 @@
     $stmt = $pdo->prepare('INSERT INTO Application( name, number, address, birthday, age,
     gender, height, weight, status, spouse, children, religion, pastor, elementary, year1, 
     hs, year2, college, year3, graduate, year4, skill, literate, yearuse, monthuse, rate, employed, company, position, 
-    char1, address1, char2, address2, emergency, emergencynumber 
+    char1, address1, char2, address2, emergency, emergencynumber, Picture 
     ) VALUES (
-        ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+        ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
     )');
     $return = $stmt->execute([ $name, $number, $address, $birthday, $age, 
     $gender, $height, $weight, $status, $spouse, $children, $religion, $pastor, $elementary, $year1, 
     $hs, $year2, $college, $year3, $graduate, $year4, $skill, $literate, $yearuse, $monthuse, $rate, $employed, $company, $positon, 
-    $char1, $address1, $char2, $address2, $emergency, $emergencynumber]);
+    $char1, $address1, $char2, $address2, $emergency, $emergencynumber, $filepath]);
 }
 
     print_r($stmt->errorinfo());
