@@ -8,7 +8,8 @@
     <STYLE> 
     .border{
         margin-top: 120px;
-        margin-left: 270px;
+        margin-left: auto;
+        margin-right: auto;
         height: 80%;
         width: 70%;
         border: solid black;
@@ -19,14 +20,15 @@
     }
     form{
         margin-left: 50px;
-        
         color: powderblue;
     }
-    header{
-        margin-left: 37px;
+    }
+    .head{
+        margin-right: auto;
+        margin-left: auto;
         margin-top: -8px;
         margin-bottom: -8px;
-        width: 1250px;
+        width: 90%;
         height: 150px;
         
         
@@ -55,7 +57,7 @@
     }
     .submit input{
         background-color: firebrick;
-        padding: 10px 24px;
+        padding: 10px;
         border: 0px;
       cursor: pointer;
       box-shadow: 0 8px 16px 0 rgb(150, 140, 140) 0 6px 20px 0 grey;
@@ -94,7 +96,7 @@
 
 
     <div class="border">    
-        <header>
+            <div class="head">
                 <div>
                     <h4>Join Us!</h4>
                 </div>
@@ -103,9 +105,8 @@
                 </div>
                 <div>
                    <p> APPLICATION FORM</p>
-                </div>
-                
-        </header>
+                </div>   
+            </div>
     <br><br>
     <hr>
     <br>
@@ -128,9 +129,9 @@
                 <label for="">Gender : </label>
                 Man <input type="radio" name="gender" id="gender" value="man" <?php if ($item['gender'] == 'man') { ?>checked<?php } ?>> Woman <input type="radio" name="gender" id="gender" value="woman" <?php if ($item['gender'] == 'woman') { ?>checked<?php } ?>><br><br> 
                 <label for="">Height : </label>
-                <input type="number" name="height" id="height" placeholder="Cm" value="<?=$item['height']?>">&nbsp;&nbsp;
+                <input type="number" name="height" id="height" placeholder="Cm" value="<?=$item['height']?>">cm&nbsp;&nbsp;&nbsp;&nbsp;
                 <label for="">  Weight</label>
-                <input type="number" name="weight" id="weight" placeholder="Kg" value="<?=$item['weight']?>"><br><br>
+                <input type="number" name="weight" id="weight" placeholder="Kg" value="<?=$item['weight']?>">kg&nbsp;&nbsp;<br><br>
                 <label for="">Civil Status :</label>
                 <input type="text" name="status" id="status" placeholder="Citizen" value="<?=$item['status']?>"><br><br>
                 <label for="">Name of Spouse (If Married) :</label>
@@ -205,7 +206,7 @@
             <br><br>
             
                 <div class="submit">
-                <input type="submit" value="Save Data">
+                <input type="submit" value="Save Data" required>
                 </div>
         </form>
     </div>

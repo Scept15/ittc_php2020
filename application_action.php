@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Application Action</title>
+    <style>
+    a{
+        text-decoration: none;
+        color: darkkhaki;
+    }
+    a{
+    color: teal;
+    }
+    a:active{
+        color: indianred;
+    }
+   
+
+    a:hover{
+        color: magenta;
+    }
+    
+    </style>
 </head>
 <body>
 
@@ -186,6 +204,7 @@
     $char1, $address1, $char2, $address2, $emergency, $emergencynumber, $filepath]);
 }
 
+    
     print_r($stmt->errorinfo());
 
 
@@ -234,7 +253,10 @@
 
 
     ?>
-    <a href="application_list.php">Go to Application list</a>
+
+
+    
+    <a class="applist" href="application_list.php">Go to Application list</a>
     
 </body>
 </html>
