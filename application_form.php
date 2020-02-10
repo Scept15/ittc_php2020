@@ -22,7 +22,7 @@
         margin-left: 50px;
         color: powderblue;
     }
-    }
+    
     .head{
         margin-right: auto;
         margin-left: auto;
@@ -30,22 +30,21 @@
         margin-bottom: -8px;
         width: 90%;
         height: 150px;
-        
-        
-      /*  color: grey; */
         text-align: center;
-        box-shadow: 0px 0px 10px 2px grey;
+        /* box-shadow: 0px 0px 10px 2px grey;  */
     }
     h4{
+        margin-bottom: 30px;
         color:firebrick;
     }
     
     h1{
-        margin-top: 30px;
-        color: maroon;
-        text-shadow: 1px .5px white;
+        margin-top: 20px;
+        color: crimson;
+        text-shadow: 1px .5px lightcyan;
     }
     p{
+        margin-top: 20px;
         color: grey;
     }
     .bold{
@@ -101,7 +100,7 @@
                     <h4>Join Us!</h4>
                 </div>
                 <div>
-                    <h1>IT TRAINING CENTER</h1>
+                    <h1>ITTC TRAINING CENTER</h1>
                 </div>
                 <div>
                    <p> APPLICATION FORM</p>
@@ -125,13 +124,13 @@
                 <label for="">Birthday :</label>
                 <input type="date" name="birthday" id="birthday" value="<?=$item['birthday']?>">&nbsp;&nbsp;&gt;&lt;&quot;&#13;
                 <label for="">Age</label>
-                <input type="number" name="age" id="age" value="<?=$item['age']?>" min="18" max="120"><br><br>
+                <input type="number" name="age" id="age" value="<?=$item['age']?>" min="18" max="120">&nbsp;yrs old<br><br>
                 <label for="">Gender : </label>
                 Man <input type="radio" name="gender" id="gender" value="man" <?php if ($item['gender'] == 'man') { ?>checked<?php } ?>> Woman <input type="radio" name="gender" id="gender" value="woman" <?php if ($item['gender'] == 'woman') { ?>checked<?php } ?>><br><br> 
                 <label for="">Height : </label>
-                <input type="number" name="height" id="height" placeholder="Cm" value="<?=$item['height']?>">cm&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="number" name="height" id="height" placeholder="Cm" value="<?=$item['height']?>">&nbsp;Cm&nbsp;&nbsp;&nbsp;&nbsp;
                 <label for="">  Weight</label>
-                <input type="number" name="weight" id="weight" placeholder="Kg" value="<?=$item['weight']?>">kg&nbsp;&nbsp;<br><br>
+                <input type="number" name="weight" id="weight" placeholder="Kg" value="<?=$item['weight']?>">&nbsp;Kg&nbsp;&nbsp;<br><br>
                 <label for="">Civil Status :</label>
                 <input type="text" name="status" id="status" placeholder="Citizen" value="<?=$item['status']?>"><br><br>
                 <label for="">Name of Spouse (If Married) :</label>
