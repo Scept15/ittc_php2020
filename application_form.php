@@ -5,9 +5,11 @@
     <meta name="viewport" content="wth=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Application Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Roboto+Slab&display=swap" rel="stylesheet">
     <STYLE> 
     .border{
-        margin-top: 120px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         margin-left: auto;
         margin-right: auto;
         height: 80%;
@@ -40,7 +42,7 @@
     
     h1{
         margin-top: 20px;
-        color: crimson;
+        color: maroon;
         text-shadow: 1px .5px lightcyan;
     }
     p{
@@ -48,21 +50,24 @@
         color: grey;
     }
     .bold{
-        color: white;
+        color: lavenderblush;
+        font-family: 'Roboto Slab', serif;
     }
     .submit{
       margin-left:630px;
       margin-bottom: 30px;
     }
     .submit input{
-        background-color: firebrick;
-        padding: 10px;
-        border: 0px;
+        background-color: maroon;
+        padding: 5px 10px 5px 10px;
+        border: .3px solid grey ;
       cursor: pointer;
-      box-shadow: 0 8px 16px 0 rgb(150, 140, 140) 0 6px 20px 0 grey;
+      box-shadow: 0px 0px 3px 1px grey;
+      font-family: 'Lemonada', cursive;
+      font-size: 15px;
     }
-    /*
-    {
+    
+  /*   {
     form{
         display: inline-block;
         position: relative;
@@ -70,7 +75,7 @@
     label{
         display: inline-block;
     }
-   */
+  */
 
     </STYLE>
 </head>
@@ -106,9 +111,9 @@
                    <p> APPLICATION FORM</p>
                 </div>   
             </div>
-    <br><br>
+    
     <hr>
-    <br>
+    
         <div class="form">
             <form method="POST" action="application_action.php" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?=$item['id']?>" />
@@ -177,7 +182,7 @@
                 (1)Beginner user <input type="radio" name="rate" id="rate" value="1" <?php if ($item['rate'] == '1') { ?>checked<?php } ?>> (2)Advance user <input type="radio" name="rate" id="rate" value="2" <?php if ($item['rate'] == '2') { ?>checked<?php } ?>> (3) Expert user <input type="radio" name="rate" id="rate" value="3" <?php if ($item['rate'] == '3') { ?>checked<?php } ?>><br><br>
                 <label for="">4. Are you currently employed?</label>
                 Yes<input type="radio" name="employed" id="employed" value="yes" <?php if ($item['employed'] == 'yes') { ?>checked<?php } ?>> No<input type="radio" name="employed" id="employed" value="no" <?php if ($item['employed'] == 'no') { ?>checked<?php } ?>><br><br>
-                <label for="">5. (4 - If yes) Name of Company?</label><br>
+                <label for="">5. (4 - If yes) Name of Company?</label><br><br>
                 Company <input type="text" name="company" id="company" placeholder="Company Name" value="<?=$item['company']?>">&nbsp;&nbsp;
                 Position <input type="text" name="position" id="position" placeholder="Position" value="<?=$item['position']?>"><br>
                 
@@ -195,14 +200,14 @@
 
                 <hr>
 
-                <p class="bold">Person to be contacted in case of emergency :</p>
+                <p class="bold">V. Person to be contacted in case of emergency :</p>
 
                 <Label>Name: </Label>
                 <input type="text" name="emergency" id="emergency" placeholder="Full Name" value="<?=$item['emergency']?>">
-                <label for="">Contact Number :</label>
+                <label for="">Contact Number :</label>&nbsp;&nbsp;
                 <input type="text" name="emergencynumber" id="emergencynumber" value="<?=$item['emergencynumber']?>">
         </div>
-            <br><br>
+        <br>
             
                 <div class="submit">
                 <input type="submit" value="Save Data" required>
