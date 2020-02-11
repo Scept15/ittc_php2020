@@ -133,16 +133,20 @@
         char1 = :char1,
         address1 = :address1,
         char2 = :char2,
-        address2 = :char2,
+        address2 = :address2,
         emergency = :emergency,
         emergencynumber = :emergencynumber,
         post = :post';
+
     if ($filepath){
         $sql .= ',Picture = :Picture'; 
     }
     
     $sql .= 'WHERE id = :id';
+
     $stmt = $pdo->prepare($sql);
+
+
     $params = [
         'name' => $name,
         'number' => $number,
@@ -182,6 +186,7 @@
         'post' => $post,
         'id' => $id,
     ];
+
 
     if ($filepath){
         $params['Picture'] = $filepath; 

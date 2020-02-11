@@ -66,7 +66,14 @@
       font-family: 'Lemonada', cursive;
       font-size: 15px;
     }
-    
+    .submit input:hover{
+        color: mistyrose;
+        box-shadow: 0px 0px 3px 1px mistyrose;
+    }
+    .submit input:active{
+        color: black;
+        box-shadow: 0px 0px 3px 1px grey;
+    }
   /*   {
     form{
         display: inline-block;

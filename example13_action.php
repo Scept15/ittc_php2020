@@ -7,7 +7,7 @@
     <title> example 13 action page </title>
 </head>
 <body>
-    <h1>Example 13 pOST form</h1>
+    
   
     <?php
      
@@ -36,7 +36,6 @@
         post = :post';
         if ($userpw){
             $sql .= ',password = :password';
-
         }
         $sql .= 'WHERE id = :id';
         $stmt = $pdo->preprare($sql);
@@ -71,19 +70,19 @@
 
     print_r($stmt->errorinfo());
 
-    echo '<p>  User ID is : ' . $userid . 
-    '<br><br> Password is : ' . $pass . 
-    '<br><br> Check Password is : ' . $pass2 . 
-    '<br><br> First Name is : ' . $fname . 
-    '<br><br> Middle Name is : ' . $mname . 
-    '<br><br> Last Name is : ' . $lname . 
-    '<br><br> Birthday is : ' . $birth . 
-    '<br><br> Address is : ' . $address . 
-    '<br><br> Post Number is : ' . $post . '</p>';
+    echo ' User ID is : ' . $userid . '<br><br>';
+    echo ' Password is : ' . $pass . '<br><br>';
+    echo ' Check Password is : ' . $pass2 . '<br><br>';
+    echo ' First Name is : ' . $fname . '<br><br>';
+    echo ' Middle Name is : ' . $mname . '<br><br>';
+    echo ' Last Name is : ' . $lname . '<br><br>';
+    echo ' Birthday is : ' . $birth . '<br><br>';
+    echo ' Address is : ' . $address . '<br><br>';
+    echo ' Post Number is : ' . $post . '<br>';
+    ?>
 
 
-?>
-<a href="example13_list.php">Go to list</a>
+    <a href="example13_list.php">Go to list</a>
 
 </body>
 </html>
