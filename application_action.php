@@ -56,45 +56,45 @@
 
 
     $id = $_POST['id'];
-    $name = $_POST[name];
-    $number = $_POST[number];
-    $address = $_POST[address];
-    $birthday = $_POST[birthday];
-    $age = $_POST[age];
-    $gender = $_POST[gender];
-    $height = $_POST[height];
-    $weight = $_POST[weight];
-    $status = $_POST[status];
-    $spouse = $_POST[spouse];
-    $children = $_POST[children];
-    $religion = $_POST[religion];
-    $pastor = $_POST[pastor];
+    $name = $_POST['name'];
+    $number = $_POST['number'];
+    $address = $_POST['address'];
+    $birthday = $_POST['birthday'];
+    $age = $_POST['age'];
+    $gender = $_POST['gender'];
+    $height = $_POST['height'];
+    $weight = $_POST['weight'];
+    $status = $_POST['status'];
+    $spouse = $_POST['spouse'];
+    $children = $_POST['children'];
+    $religion = $_POST['religion'];
+    $pastor = $_POST['pastor'];
 
-    $elementary = $_POST[elementary];
-    $year1 = $_POST[year1];
-    $hs = $_POST[hs];
-    $year2 = $_POST[year2];
-    $college = $_POST[college];
-    $year3 = $_POST[year3];
-    $graduate = $_POST[graduate];
-    $year4 = $_POST[year4];
-    $skill = $_POST[skill];
+    $elementary = $_POST['elementary'];
+    $year1 = $_POST['year1'];
+    $hs = $_POST['hs'];
+    $year2 = $_POST['year2'];
+    $college = $_POST['college'];
+    $year3 = $_POST['year3'];
+    $graduate = $_POST['graduate'];
+    $year4 = $_POST['year4'];
+    $skill = $_POST['skill'];
     
-    $literate = $_POST[literate];
-    $yearuse = $_POST[yearuse];
-    $monthuse = $_POST[monthuse];
-    $rate = $_POST[rate];
-    $employed = $_POST[employed];
-    $company = $_POST[company];
-    $positon = $_POST[position];
+    $literate = $_POST['literate'];
+    $yearuse = $_POST['yearuse'];
+    $monthuse = $_POST['monthuse'];
+    $rate = $_POST['rate'];
+    $employed = $_POST['employed'];
+    $company = $_POST['company'];
+    $positon = $_POST['position'];
 
-    $char1 = $_POST[char1];
-    $address1 = $_POST[address1];
-    $char2 = $_POST[char2];
-    $address2 = $_POST[address2];
+    $char1 = $_POST['char1'];
+    $address1 = $_POST['address1'];
+    $char2 = $_POST['char2'];
+    $address2 = $_POST['address2'];
 
-    $emergency = $_POST[emergency];
-    $emergencynumber = $_POST[emergencynumber];
+    $emergency = $_POST['emergency'];
+    $emergencynumber = $_POST['emergencynumber'];
 
     $pdo = new PDO('mysql:host=localhost;dbname=Application_Form', 'root', 'zxcv1234');
 
