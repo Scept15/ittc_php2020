@@ -13,7 +13,7 @@ $array = array($text, $number, $float, $boolean);
 
 // 1st parameter "looking for" 2nd parameter "what to change" 3rd parameter "in what variable"
 $old = str_replace(" ", "",$text);
-// Kamusta po?  ===  Kamustapo?
+// Kamusta ?  ===  Kamustapo?
 
 // couting length
 echo strlen($old);
